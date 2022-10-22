@@ -8,7 +8,6 @@ frame = pdb_file.frames()[0]
 chain_A_coords = frame.molecules.filter(mName == "A").coords.values[:2]
 chain_C_coords = frame.molecules.filter(mName == "C").coords.values[:2]
 
-
 for i in chain_A_coords:
 	for j in chain_C_coords:
  		a = np.sum((i-j)**2, axis = 0)
